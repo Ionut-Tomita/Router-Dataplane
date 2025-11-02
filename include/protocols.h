@@ -1,6 +1,10 @@
 #include <unistd.h>
 #include <stdint.h>
 
+#ifndef ETHERTYPE_IP
+#define ETHERTYPE_IP		0x0800	/* IP protocol */
+#endif
+
 /* Ethernet ARP packet from RFC 826 */
 struct arp_header {
 	uint16_t htype;   /* Format of hardware address */
